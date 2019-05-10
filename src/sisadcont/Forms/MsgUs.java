@@ -14,6 +14,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 
 import javax.swing.JPanel;
 import static sisadcont.Forms.Login.idsave;
@@ -61,12 +62,7 @@ public class MsgUs extends javax.swing.JFrame {
         this.getContentPane().setBackground(new Color(0,102,204));
         jLabel1.setText("Mensajes Recibidos");
         jPanel2.setVisible(false);
-        UsLista();
-        UsMsg();
-       
-        
-       
-        
+  
            setLocationRelativeTo(null);
 
     }
@@ -84,40 +80,35 @@ public class MsgUs extends javax.swing.JFrame {
     {
         
         
-        
-          
-       for(int l=0;l<55;l++){
-        Sec_msg2 [l]=null;
-        }
+      
        List_us_r.clear();
    
-       String sql="SELECT a.nombre_us, b.secuencia, SUBSTRING(b.fechahora,1,16) AS fechahora, b.mensaje FROM usuario a, mensajes b WHERE  b.codigo_us = a.codigo_us  AND  b.codigo_us_r = '"+idsave+"' AND b.estatus = 1 AND b.estado = 0 GROUP BY b.secuencia;";
+       String sql="SELECT a.nombre_us, b.secuencia, SUBSTRING(b.fechahora,1,16) AS fechahora, b.mensaje FROM usuario a, mensajes b WHERE  b.codigo_us = a.codigo_us  AND  b.codigo_us_r = '"+idsave+"' AND b.estatus = 1 AND b.estado = 0 GROUP BY b.secuencia";
        
-       if (sql_C != null) {
-            
-            sql=sql_C;
-        }
-       int a = 0;
+      
+      
         try {
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery(sql);
             
-            
+            int a = 0; 
             while(rs.next())
             {
                
                 String Nombre_R=rs.getString("nombre_us");
                 Fechahora=rs.getString("fechahora");
-                Sec_msg2[a] = rs.getString("secuencia");
+                Sec_msg2[a] = rs.getString(2);
                 List_us_r.addElement(Nombre_R+" "+Fechahora);
 
-               
+               a++;
                 
               
             }
-           jList1.setModel(List_us_r);
+           
             
-             
+            JOptionPane.showMessageDialog(null, Sec_msg2[jList1.getSelectedIndex()]);
+             JOptionPane.showMessageDialog(null, Sec_msg2[jList1.getSelectedIndex()]);
+           
            
         } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
@@ -613,12 +604,11 @@ public class MsgUs extends javax.swing.JFrame {
         // TODO add your handling code here:
         choice2.setVisible(true);
         jLabel1.setText("Mensajes Enviados");
-        jPanel2.setVisible(true);
         jPanel1.setVisible(false);
-        UsMsgRm(null);
+        jPanel2.setVisible(true);
         jTextArea2.setText("");
-        
-           choice2.removeAll();
+        UsMsgRm(null);
+        choice2.removeAll();
         
             MSG_Choice[0]="No Leidos";
             MSG_Choice[1]="Leidos";
@@ -648,26 +638,24 @@ public class MsgUs extends javax.swing.JFrame {
         // TODO add your handling code here:
     choice2.setVisible(false);
     jLabel1.setText("Mensajes Recibidos"); 
-    jPanel1.setVisible(true);
-    jPanel2.setVisible(false);  
-   // UsMsg();
-    StringBuffer LU = new StringBuffer();
-    LU = LU.append(id_us_lista[choice1.getSelectedIndex()]);
-    msg_env = jTextArea2.getText();
+   
+  
+
+   
    
    if (jTextArea2.getText().length() == 0 ){ 
-        
+         jPanel2.setVisible(false); 
+        jPanel1.setVisible(true);
+          
             
           } else { 
         try {
             Statement st = cn.createStatement();
-            st.executeUpdate("INSERT INTO mensajes (codigo_us,mensaje,codigo_us_r) VALUES ('"+LU+"','"+msg_env+"','"+idsave+"')");
+            st.executeUpdate("INSERT INTO mensajes (codigo_us,mensaje,codigo_us_r) VALUES ('"+id_us_lista[choice1.getSelectedIndex()]+"','"+msg_env+"','"+idsave+"')");
             jPanel1.setVisible(true);
             jPanel2.setVisible(false);
-      
-            //List_us.removeAllElements();
-           
-            
+            jTextArea2.setText("");
+                
             
   } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
@@ -675,11 +663,8 @@ public class MsgUs extends javax.swing.JFrame {
        
        
           }
-     
-      UsLista();
-        UsMsg();
        
-   jTextArea2.setText("");
+ 
       
   
 
@@ -776,7 +761,7 @@ public class MsgUs extends javax.swing.JFrame {
         // TODO add your handling code here:
      
   
-      jTextArea2.setText(" ");
+      jTextArea2.setText("");
     }//GEN-LAST:event_btn_32MouseClicked
 
     private void btn_32MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_32MouseEntered
@@ -830,7 +815,7 @@ public class MsgUs extends javax.swing.JFrame {
          
             
         switch(choice2.getSelectedItem()){
-             
+        
             case "No Leidos":
                UsMsgRm("SELECT a.nombre_us, b.secuencia, SUBSTRING(b.fechahora,1,16) AS fechahora, b.mensaje FROM usuario a, mensajes b WHERE b.codigo_us = a.codigo_us AND  b.codigo_us_r = '"+idsave+"' AND  b.estado = 0 AND b.estatus = 1  GROUP BY b.secuencia;");
                 break;
@@ -860,25 +845,23 @@ public class MsgUs extends javax.swing.JFrame {
             {
                 
                 msg_rec = rs.getString("mensaje");
-                 
-                
+ 
             }
-  
+                jTextArea1.setText("");
+                jTextArea1.setText(msg_rec);
+                
   } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
             P_process.SendMail(ex.getMessage());
         }
         
-        jTextArea1.setText("");
-        jTextArea1.setText(msg_rec);
+        
      }
-         int b = 0;
+        
          if(jPanel2.isVisible() == true){
-             UsMsgRm(null);
-       
-
+ 
         try {
-            
+          
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery("SELECT  mensaje FROM mensajes  WHERE codigo_us_r = '"+idsave+"' AND secuencia =  "+Sec_msg2[jList1.getSelectedIndex()]+" AND estatus = 1 AND estado = 0 GROUP BY secuencia");
             while(rs.next())
@@ -887,14 +870,14 @@ public class MsgUs extends javax.swing.JFrame {
                 msg_rec=rs.getString("mensaje");
    
             }
-  
+              jTextArea2.setText("");
+             jTextArea2.setText(msg_rec);
   } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
             P_process.SendMail(ex.getMessage());
         }
-        //JOptionPane.showMessageDialog(null, msg_rec);
-        jTextArea2.setText("");
-        jTextArea2.setText(msg_rec);
+     
+       
      }
         
     }//GEN-LAST:event_jList1MouseClicked

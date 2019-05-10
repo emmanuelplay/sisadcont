@@ -83,26 +83,26 @@ public class P_Principal extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setLocationByPlatform(true);
         setMinimumSize(new java.awt.Dimension(1150, 864));
-        setPreferredSize(new java.awt.Dimension(1150, 864));
         setResizable(false);
         setSize(new java.awt.Dimension(1150, 864));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Sec_panel.setBackground(new java.awt.Color(255, 255, 255));
-        Sec_panel.setPreferredSize(new java.awt.Dimension(146, 592));
+        Sec_panel.setPreferredSize(new java.awt.Dimension(169, 726));
 
         javax.swing.GroupLayout Sec_panelLayout = new javax.swing.GroupLayout(Sec_panel);
         Sec_panel.setLayout(Sec_panelLayout);
         Sec_panelLayout.setHorizontalGroup(
             Sec_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 146, Short.MAX_VALUE)
+            .addGap(0, 169, Short.MAX_VALUE)
         );
         Sec_panelLayout.setVerticalGroup(
             Sec_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 592, Short.MAX_VALUE)
+            .addGap(0, 726, Short.MAX_VALUE)
         );
 
-        getContentPane().add(Sec_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 65, 146, 592));
+        getContentPane().add(Sec_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 65, 169, 726));
+        Sec_panel.getAccessibleContext().setAccessibleName("");
 
         Ter_panel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -727,7 +727,7 @@ public class P_Principal extends javax.swing.JFrame {
         Sec_panel.setVisible(true); 
         if (OpenClose == 1) {
 
-            CallPanels(P_Menu, Sec_panel, 146, 592);
+            CallPanels(P_Menu, Sec_panel, 169, 726);
 
        OpenClose=2;   
        } else {

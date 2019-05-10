@@ -9,10 +9,23 @@ import java.sql.Statement;
 
 public class conectar {
     Connection conectar=null;
-    public  Connection conexion(){
+    
+    
+    public   Connection conexion(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conectar=DriverManager.getConnection("jdbc:mysql://10.0.0.201/sisadcontdb","root","vs1051");
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.print(e.getMessage());//PONER MENSAJE DE ERROR DE CONEXION 
+        }
+        return conectar;
+    }
+    
+        
+    public   Connection conexionLogin (String Dir, String Us, String Pas){
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conectar=DriverManager.getConnection("jdbc:mysql://10.0.0.201/sisadcontdb","root","vs1051"/*Dir ,Us ,Pas*/);
         } catch (ClassNotFoundException | SQLException e) {
             System.out.print(e.getMessage());//PONER MENSAJE DE ERROR DE CONEXION 
         }

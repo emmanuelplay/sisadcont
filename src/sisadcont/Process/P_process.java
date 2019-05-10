@@ -117,9 +117,15 @@ public class P_process {
         }
     }
 
-    public static void LogUs(String Us_log) {
+    public static void LogUs(String Us_log,int a) {
     try {
-            String ruta = "c:/LogUs.txt";
+        String ruta;
+        if (a == 1) {
+            ruta = "c:/LogUs.txt"; }
+        else{
+ 
+            ruta = "c:/conexionDB.txt"; }
+        
             String contenido = Us_log;
             File file = new File(ruta);
             // Si el archivo no existe es creado
