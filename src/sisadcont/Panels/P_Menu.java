@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package sisadcont.Panels;
 
 
@@ -694,9 +690,9 @@ import static sisadcont.Process.P_process.CallPanels;
                 .addComponent(ind_13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel20)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
         btn_13Layout.setVerticalGroup(
             btn_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -705,7 +701,7 @@ import static sisadcont.Process.P_process.CallPanels;
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(btn_13Layout.createSequentialGroup()
                 .addGap(5, 5, 5)
-                .addGroup(btn_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(btn_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel2))
                 .addContainerGap())
@@ -1091,7 +1087,6 @@ import static sisadcont.Process.P_process.CallPanels;
     }//GEN-LAST:event_btn_1MousePressed
 
     private void btn_1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1MouseReleased
-        // TODO add your handling code here:
     
     }//GEN-LAST:event_btn_1MouseReleased
 
@@ -1100,8 +1095,6 @@ import static sisadcont.Process.P_process.CallPanels;
     }//GEN-LAST:event_btn_15MousePressed
 
     private void btn_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1MouseClicked
- 
-        //P_Principal.Ter_panel.setVisible(true);
 
        P_Principal.Sec_panel.setVisible(true);
        CallPanels(p2,P_Principal.Ter_panel,1020, 52);

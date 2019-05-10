@@ -8,7 +8,6 @@ package sisadcont.Forms;
 
 import diu.swe.habib.JPanelSlider.JPanelSlider;
 import sisadcont.Process.P_process;
-import java.awt.BorderLayout;
 import java.awt.Color;
 
 import java.awt.event.MouseEvent;
@@ -971,13 +970,6 @@ public class P_Principal extends javax.swing.JFrame {
              }
         
     }
-    
-    
-    
- 
-    
-    
-    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
