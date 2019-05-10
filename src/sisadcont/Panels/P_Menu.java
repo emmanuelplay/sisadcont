@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package sisadcont.Panels;
 
 
@@ -607,11 +603,19 @@ import static sisadcont.Process.P_process.CallPanels;
             btn_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_13Layout.createSequentialGroup()
                 .addComponent(ind_13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                 .addGap(0, 0, 0)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jLabel20)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+=======
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel20)
+                .addContainerGap(9, Short.MAX_VALUE))
+>>>>>>> edf24fa264b0ec84c87111643a679bbf05a5e746
         );
         btn_13Layout.setVerticalGroup(
             btn_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -620,10 +624,17 @@ import static sisadcont.Process.P_process.CallPanels;
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(btn_13Layout.createSequentialGroup()
                 .addGap(5, 5, 5)
+<<<<<<< HEAD
                 .addGroup(btn_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+=======
+                .addGroup(btn_13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2))
+                .addContainerGap())
+>>>>>>> edf24fa264b0ec84c87111643a679bbf05a5e746
         );
 
         add(btn_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 170, 40));
@@ -1318,7 +1329,6 @@ import static sisadcont.Process.P_process.CallPanels;
     }//GEN-LAST:event_btn_1MousePressed
 
     private void btn_1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1MouseReleased
-        // TODO add your handling code here:
     
     }//GEN-LAST:event_btn_1MouseReleased
 
@@ -1327,8 +1337,6 @@ import static sisadcont.Process.P_process.CallPanels;
     }//GEN-LAST:event_btn_15MousePressed
 
     private void btn_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_1MouseClicked
- 
-        //P_Principal.Ter_panel.setVisible(true);
 
        P_Principal.Sec_panel.setVisible(true);
        CallPanels(p2,P_Principal.Ter_panel,1020, 52);

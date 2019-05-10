@@ -592,7 +592,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/img/home_24px.png"/>
+              <Image iconType="3" name="/img/formulario.png"/>
             </Property>
           </Properties>
         </Component>
@@ -805,7 +805,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/img/home_24px.png"/>
+              <Image iconType="3" name="/img/print.png"/>
             </Property>
           </Properties>
         </Component>
@@ -876,7 +876,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/img/home_24px.png"/>
+              <Image iconType="3" name="/img/maintenance_24px.png"/>
             </Property>
           </Properties>
         </Component>
@@ -947,7 +947,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/img/home_24px.png"/>
+              <Image iconType="3" name="/img/settings_24px.png"/>
             </Property>
           </Properties>
         </Component>
@@ -1588,7 +1588,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/img/home_24px.png"/>
+                  <Image iconType="3" name="/img/warehouse_1_24px.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -1642,7 +1642,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/img/home_24px.png"/>
+                  <Image iconType="3" name="/img/print.png"/>
                 </Property>
               </Properties>
             </Component>

@@ -7,10 +7,12 @@ package sisadcont.Forms;
 
 
 import java.awt.Color;
+import java.awt.List;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
@@ -68,10 +70,10 @@ public class MsgUs extends javax.swing.JFrame {
     }
     
     void color_btn(JPanel panel, int a){
-        if(a == 1){
-       panel.setBackground(new Color(0,102,235));
+       if(a == 1){
+        panel.setBackground(new Color(0,102,235));
        }else{ 
-        panel.setBackground(new Color(0,102,204));    
+            panel.setBackground(new Color(0,102,204));    
          
         }
     }
@@ -97,10 +99,15 @@ public class MsgUs extends javax.swing.JFrame {
                
                 String Nombre_R=rs.getString("nombre_us");
                 Fechahora=rs.getString("fechahora");
+<<<<<<< HEAD
                 Sec_msg2[a] = rs.getString(2);
                 List_us_r.addElement(Nombre_R+" "+Fechahora);
 
                a++;
+=======
+                Sec_msg2[a] = rs.getString("secuencia");
+                List_us_r.addElement(Nombre_R+" "+Fechahora);  
+>>>>>>> edf24fa264b0ec84c87111643a679bbf05a5e746
                 
               
             }
@@ -607,8 +614,13 @@ public class MsgUs extends javax.swing.JFrame {
         jPanel1.setVisible(false);
         jPanel2.setVisible(true);
         jTextArea2.setText("");
+<<<<<<< HEAD
         UsMsgRm(null);
         choice2.removeAll();
+=======
+        
+            choice2.removeAll();
+>>>>>>> edf24fa264b0ec84c87111643a679bbf05a5e746
         
             MSG_Choice[0]="No Leidos";
             MSG_Choice[1]="Leidos";
@@ -636,12 +648,23 @@ public class MsgUs extends javax.swing.JFrame {
 
     private void btn_28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_28MouseClicked
         // TODO add your handling code here:
+<<<<<<< HEAD
     choice2.setVisible(false);
     jLabel1.setText("Mensajes Recibidos"); 
    
   
 
    
+=======
+        choice2.setVisible(false);
+        jLabel1.setText("Mensajes Recibidos"); 
+        jPanel1.setVisible(true);
+        jPanel2.setVisible(false);  
+       // UsMsg();
+        StringBuffer LU = new StringBuffer();
+        LU = LU.append(id_us_lista[choice1.getSelectedIndex()]);
+        msg_env = jTextArea2.getText();
+>>>>>>> edf24fa264b0ec84c87111643a679bbf05a5e746
    
    if (jTextArea2.getText().length() == 0 ){ 
          jPanel2.setVisible(false); 
@@ -660,11 +683,13 @@ public class MsgUs extends javax.swing.JFrame {
   } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
-       
           }
        
+<<<<<<< HEAD
  
+=======
+        jTextArea2.setText("");
+>>>>>>> edf24fa264b0ec84c87111643a679bbf05a5e746
       
   
 
@@ -713,7 +738,6 @@ public class MsgUs extends javax.swing.JFrame {
 
     private void btn_30MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_30MouseExited
         // TODO add your handling code here:
-        
         color_btn(btn_30,0);
     }//GEN-LAST:event_btn_30MouseExited
 
@@ -759,9 +783,13 @@ public class MsgUs extends javax.swing.JFrame {
 
     private void btn_32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_32MouseClicked
         // TODO add your handling code here:
+<<<<<<< HEAD
      
   
       jTextArea2.setText("");
+=======
+      jTextArea2.setText(" ");
+>>>>>>> edf24fa264b0ec84c87111643a679bbf05a5e746
     }//GEN-LAST:event_btn_32MouseClicked
 
     private void btn_32MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_32MouseEntered
@@ -818,15 +846,15 @@ public class MsgUs extends javax.swing.JFrame {
         
             case "No Leidos":
                UsMsgRm("SELECT a.nombre_us, b.secuencia, SUBSTRING(b.fechahora,1,16) AS fechahora, b.mensaje FROM usuario a, mensajes b WHERE b.codigo_us = a.codigo_us AND  b.codigo_us_r = '"+idsave+"' AND  b.estado = 0 AND b.estatus = 1  GROUP BY b.secuencia;");
-                break;
+               break;
             
             case "Leidos":
                UsMsgRm("SELECT a.nombre_us, b.secuencia, SUBSTRING(b.fechahora,1,16) AS fechahora, b.mensaje FROM usuario a, mensajes b WHERE b.codigo_us = a.codigo_us AND b.codigo_us_r = '"+idsave+"' AND b.estado = 0 AND b.estatus = 0  GROUP BY b.secuencia;");
-                break;
+               break;
             
             case "Todos":
                UsMsgRm("SELECT a.nombre_us,  b.secuencia, SUBSTRING(b.fechahora,1,16) AS fechahora, b.mensaje FROM usuario a, mensajes b WHERE  b.codigo_us = a.codigo_us AND b.codigo_us_r = '"+idsave+"' AND b.estado = 0 GROUP BY b.secuencia;");
-              break;
+               break;
                 
         } 
         
@@ -835,7 +863,7 @@ public class MsgUs extends javax.swing.JFrame {
 
     private void jList1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MouseClicked
         // TODO add your handling code here:
-        
+         
          if(jPanel1.isVisible() == true){
     
         try {
@@ -845,11 +873,19 @@ public class MsgUs extends javax.swing.JFrame {
             {
                 
                 msg_rec = rs.getString("mensaje");
+<<<<<<< HEAD
  
             }
                 jTextArea1.setText("");
                 jTextArea1.setText(msg_rec);
                 
+=======
+                 JOptionPane.showMessageDialog(null, msg_rec);
+                
+            }
+            
+  
+>>>>>>> edf24fa264b0ec84c87111643a679bbf05a5e746
   } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
             P_process.SendMail(ex.getMessage());
@@ -867,17 +903,28 @@ public class MsgUs extends javax.swing.JFrame {
             while(rs.next())
             {
                 
-                msg_rec=rs.getString("mensaje");
-   
+                msg_rec = rs.getString("mensaje");
+                JOptionPane.showMessageDialog(null, msg_rec);
             }
+<<<<<<< HEAD
               jTextArea2.setText("");
              jTextArea2.setText(msg_rec);
+=======
+            
+  
+>>>>>>> edf24fa264b0ec84c87111643a679bbf05a5e746
   } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
             P_process.SendMail(ex.getMessage());
         }
+<<<<<<< HEAD
      
        
+=======
+            
+            jTextArea2.setText("");
+            jTextArea2.setText(msg_rec);
+>>>>>>> edf24fa264b0ec84c87111643a679bbf05a5e746
      }
         
     }//GEN-LAST:event_jList1MouseClicked
@@ -945,7 +992,7 @@ public class MsgUs extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
-conectar cc = new conectar();
-Connection cn = cc.conexion();
+    conectar cc = new conectar();
+    Connection cn = cc.conexion();
 
 }

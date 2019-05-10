@@ -411,7 +411,7 @@ public class P_Mod extends javax.swing.JPanel {
 
         jLabel37.setBackground(new java.awt.Color(250, 106, 18));
         jLabel37.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home_24px.png"))); // NOI18N
+        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/formulario.png"))); // NOI18N
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(255, 255, 255));
@@ -558,7 +558,7 @@ public class P_Mod extends javax.swing.JPanel {
 
         jLabel43.setBackground(new java.awt.Color(250, 106, 18));
         jLabel43.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home_24px.png"))); // NOI18N
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/print.png"))); // NOI18N
 
         jLabel44.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(255, 255, 255));
@@ -607,7 +607,7 @@ public class P_Mod extends javax.swing.JPanel {
 
         jLabel45.setBackground(new java.awt.Color(250, 106, 18));
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home_24px.png"))); // NOI18N
+        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/maintenance_24px.png"))); // NOI18N
 
         jLabel46.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel46.setForeground(new java.awt.Color(255, 255, 255));
@@ -656,7 +656,7 @@ public class P_Mod extends javax.swing.JPanel {
 
         jLabel47.setBackground(new java.awt.Color(250, 106, 18));
         jLabel47.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home_24px.png"))); // NOI18N
+        jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/settings_24px.png"))); // NOI18N
 
         jLabel48.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel48.setForeground(new java.awt.Color(255, 255, 255));
@@ -1095,7 +1095,7 @@ public class P_Mod extends javax.swing.JPanel {
         });
 
         jLabel63.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home_24px.png"))); // NOI18N
+        jLabel63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/warehouse_1_24px.png"))); // NOI18N
 
         javax.swing.GroupLayout btn_23Layout = new javax.swing.GroupLayout(btn_23);
         btn_23.setLayout(btn_23Layout);
@@ -1140,7 +1140,7 @@ public class P_Mod extends javax.swing.JPanel {
         });
 
         jLabel64.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home_24px.png"))); // NOI18N
+        jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/print.png"))); // NOI18N
 
         javax.swing.GroupLayout btn_24Layout = new javax.swing.GroupLayout(btn_24);
         btn_24.setLayout(btn_24Layout);

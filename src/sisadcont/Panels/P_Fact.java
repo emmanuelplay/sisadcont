@@ -11,9 +11,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import sisadcont.Forms.P_Principal;
 import sisadcont.Forms.Panels.V_Fact;
+import sisadcont.Forms.Panels.V_Horario_trabajo;
 
 public class P_Fact extends javax.swing.JPanel {
       V_Fact Fact = new V_Fact();
+      V_Horario_trabajo VH = new V_Horario_trabajo();
   
     public P_Fact() {
         initComponents();
@@ -206,6 +208,15 @@ public class P_Fact extends javax.swing.JPanel {
 
     private void BT_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BT_2MouseClicked
         // TODO add your handling code here:
+        P_Principal.Paneles.setVisible(true);
+
+        VH.setSize(1020, 600);
+        VH.setLocation (0,0);
+
+        P_Principal.Paneles.removeAll();
+        P_Principal.Paneles.add(VH,BorderLayout.CENTER);
+        P_Principal.Paneles.revalidate();
+        P_Principal.Paneles.repaint();
     }//GEN-LAST:event_BT_2MouseClicked
 
     private void BT_1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BT_1MousePressed
@@ -227,18 +238,16 @@ public class P_Fact extends javax.swing.JPanel {
 
     private void BT_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BT_1MouseClicked
         // TODO add your handling code here:
-P_Principal.Paneles.setVisible(true);
+        P_Principal.Paneles.setVisible(true);
 
-Fact.setSize(1020, 600);
-Fact.setLocation (0,0);
+        Fact.setSize(1020, 600);
+        Fact.setLocation (0,0);
 
-P_Principal.Paneles.removeAll();
-P_Principal.Paneles.add(Fact,BorderLayout.CENTER);
-P_Principal.Paneles.revalidate();
-P_Principal.Paneles.repaint();
+        P_Principal.Paneles.removeAll();
+        P_Principal.Paneles.add(Fact,BorderLayout.CENTER);
+        P_Principal.Paneles.revalidate();
+        P_Principal.Paneles.repaint();
 
-        
-        
     }//GEN-LAST:event_BT_1MouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
